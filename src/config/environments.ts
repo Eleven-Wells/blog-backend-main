@@ -7,6 +7,7 @@ dotenv.config({ path: path.join(__dirname, '../../.env')});
 const mandatoryVariables = [
     "PORT",
     "APP_ENV",
+    "DATABASE_URI",
 ];
 
 const missingVariables = mandatoryVariables.filter(( variable) => !process.env[variable]);
@@ -27,7 +28,8 @@ PORT=<port_number>.
 
 const config = {
     PORT: process.env.PORT,
-    APP_ENV: process.env.APP_ENV
+    APP_ENV: process.env.APP_ENV,
+    DATABASE_URI: process.env.DATABASE_URI
 };
 
 export default config;
